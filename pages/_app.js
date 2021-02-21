@@ -1,18 +1,7 @@
-import Header from 'components/Header'
-import { ThemeProvider } from 'emotion-theming'
-import GlobalStyles from 'components/GlobalStyles/GlobalStyles'
-import theme from '../theme/theme.js'
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-    return (
-        <>
-            <ThemeProvider theme={theme}>
-                <GlobalStyles />
-                <Header />
-                <Component {...pageProps} />
-            </ThemeProvider>
-        </>
-    )
+  return <Component {...pageProps} />
 }
 
 export default MyApp
