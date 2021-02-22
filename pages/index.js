@@ -1,13 +1,25 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import React from 'react';
+import { Box, Card, Image, Heading, Text, Button } from 'rebass';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <Heading>Create Next App</Heading>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Button
+        sx={{
+          backgroundColor: 'black',
+          fontSize: 1,
+          textTransform: 'uppercase',
+          borderRadius: 99999,
+        }}
+      >
+        Nice
+      </Button>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
@@ -19,7 +31,7 @@ export default function Home() {
           <code className={styles.code}>pages/index.js</code>
         </p>
 
-        <div className={styles.grid}>
+        <Card className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -47,7 +59,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </Card>
       </main>
 
       <footer className={styles.footer}>
@@ -61,5 +73,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
